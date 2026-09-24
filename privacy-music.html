@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Amuzicg Player</title>
+<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:800px;margin:0 auto;padding:24px;line-height:1.6;color:#222}h1{font-size:1.8em}h2{margin-top:1.6em;font-size:1.2em}.muted{color:#666;font-size:.9em}ul{padding-left:1.2em}</style>
+</head>
+<body>
+<h1>Privacy Policy — Amuzicg Player</h1>
+<p class="muted">App: Amuzicg Player (<code>amuzicg.musicplayer</code>) &bull; Effective: 24 September 2026 &bull; Contact: <a href="mailto:amuzicg@gmail.com">amuzicg@gmail.com</a></p>
+
+<p>Amuzicg Player is an offline-first music player with optional internet radio. We do not require an account, we show no third-party ads, and we do not sell your data.</p>
+
+<h2>1. Data we collect</h2>
+<p><strong>We collect no personal data on our own servers — we operate none.</strong> Everything below stays on your device unless you explicitly use a network feature:</p>
+<ul>
+<li><strong>On-device only:</strong> your music library metadata (read from MediaStore), app preferences, equalizer/sleep-timer settings, favorites and playlists (DataStore/SharedPreferences). This never leaves your device.</li>
+<li><strong>Feedback emails (optional):</strong> if you tap Feedback, your email app sends a message to <code>amuzicg@gmail.com</code>. Only what you write is sent.</li>
+</ul>
+
+<h2>2. Permissions we request and why</h2>
+<ul>
+<li><strong>Audio/media access</strong> (<code>READ_MEDIA_AUDIO</code> / <code>READ_EXTERNAL_STORAGE</code> on older Android): to list and play audio files stored on your device.</li>
+<li><strong>Notifications</strong> (<code>POST_NOTIFICATIONS</code>): to show playback controls while music/radio plays.</li>
+<li><strong>Foreground service / boot</strong> (<code>FOREGROUND_SERVICE*</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>WAKE_LOCK</code>): to keep playback running in the background.</li>
+<li><strong>Internet / network state</strong> (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>): for radio streaming, station lists and album art (see §3).</li>
+<li><strong>Coarse location (declared):</strong> we do <em>not</em> collect GPS/location. Country/language for radio tabs is derived on-device from SIM country code and device locale.</li>
+<li><strong>Ringtone settings</strong> (<code>WRITE_SETTINGS</code>): only if you choose “Set as ringtone”.</li>
+</ul>
+
+<h2>3. Third-party network services (only when you use those features)</h2>
+<ul>
+<li><strong>Internet radio directory (radio-browser.info):</strong> when browsing/searching radio, the app sends the search text / country / language / tag you entered to <code>de1.api.radio-browser.info</code> to fetch public station lists. No account or device ID is sent by us.</li>
+<li><strong>Radio streams:</strong> when you press play on a station, your device connects directly to that broadcaster’s streaming server to receive audio. That server may see your IP address (as with any internet streaming).</li>
+<li><strong>Album art (Last.fm):</strong> when showing artwork, the app may send artist/album/title text to <code>ws.audioscrobbler.com</code> to look up cover art.</li>
+<li><strong>Images (Coil):</strong> station/album artwork is downloaded and cached on-device.</li>
+</ul>
+<p>We use no analytics SDK, no crash-reporting SDK, and no ad SDK in this app.</p>
+
+<h2>4. Installed-app check (social audio, optional)</h2>
+<p>If you enable “Include social app audio”, the app checks on-device which of a small hard-coded list of messaging/social apps (e.g. WhatsApp, Telegram, Discord, Signal) is installed, only to label their downloaded audio. This list never leaves your device.</p>
+
+<h2>5. Data retention &amp; deletion</h2>
+<p>Since we run no servers or accounts, there is nothing to delete server-side. Uninstalling the app deletes on-device preferences and caches (Android may keep a backup only if you enabled system backup — the app sets <code>allowBackup=false</code>). Emails you sent us are deleted on request.</p>
+
+<h2>6. Children</h2>
+<p>The app is suitable for general audiences and does not knowingly collect children’s data, since it collects none.</p>
+
+<h2>7. Changes</h2>
+<p>We will post any changes on this page and update the effective date.</p>
+
+<h2>8. Contact</h2>
+<p>Questions or deletion requests: <a href="mailto:amuzicg@gmail.com">amuzicg@gmail.com</a>.</p>
+</body>
+</html>
