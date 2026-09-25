@@ -26,11 +26,11 @@
 <ul>
 <li><strong>Foreground service / media playback</strong> (<code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>): to keep mantras playing while the app is in the background and to show a media notification with playback controls.</li>
 <li><strong>Notifications</strong> (<code>POST_NOTIFICATIONS</code>): to show the playback notification (play/pause/previous/next).</li>
-<li><strong>Network (in-app browser only)</strong> (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>): declared solely so the “Privacy Policy” link can load this page inside the app’s in-app browser (a Custom Tab — Chrome UI without leaving the app). The core app features never use the network.</li>
 </ul>
+<p>The app requests <strong>no network permissions</strong>. The “Privacy Policy” screen inside the app loads this same text from a file bundled with the app — it makes no network call. This public web page exists only because the Play Store listing requires a URL.</p>
 
 <h2>4. Third-party services</h2>
-<p><strong>The app integrates no third-party SDKs, trackers or services that receive data from it.</strong> The only network call is the optional in-app browser described above, which loads this policy page.</p>
+<p><strong>The app integrates no third-party SDKs, trackers or services and makes no network calls of any kind.</strong></p>
 <p><strong>Rate / Review:</strong> tapping “Rate and Review” opens the Google Play Store in an external app. The app itself sends no information beyond the standard Play Store attribution that Android handles.</p>
 
 <h2>5. Data retention &amp; deletion</h2>
