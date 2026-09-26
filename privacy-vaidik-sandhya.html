@@ -4,45 +4,101 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — Vaidik Sandhya</title>
-<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:800px;margin:0 auto;padding:24px;line-height:1.6;color:#222}h1{font-size:1.8em}h2{margin-top:1.6em;font-size:1.2em}.muted{color:#666;font-size:.9em}ul{padding-left:1.2em}</style>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0 0 40px 0;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    line-height: 1.7; color: #F5E6D0;
+    background: linear-gradient(180deg, #2A0808 0%, #380C0C 40%, #1E0505 100%);
+  }
+  .hero {
+    text-align: center; padding: 36px 24px 20px 24px;
+    background: radial-gradient(ellipse at 50% 0%, #6B2410 0%, rgba(107,36,16,0) 70%);
+  }
+  .om { font-size: 56px; color: #F96700; text-shadow: 0 0 24px rgba(249,103,0,.55); line-height: 1; }
+  h1 { color: #FF9A2A; font-size: 1.6em; margin: 12px 0 4px 0; }
+  .muted { color: #C9A27A; font-size: .85em; padding: 0 24px; }
+  .muted a, p a { color: #FFB45E; }
+  .card {
+    margin: 16px; padding: 18px 20px; border-radius: 14px;
+    background: rgba(255,255,255,.045);
+    border: 1px solid rgba(249,103,0,.28);
+  }
+  h2 { color: #FF9A2A; font-size: 1.1em; margin: 0 0 8px 0; }
+  p { margin: 8px 0; }
+  ul { padding-left: 1.3em; margin: 8px 0; }
+  li { margin: 6px 0; }
+  li b, p b, p strong { color: #FFB45E; }
+  code {
+    background: rgba(249,103,0,.14); color: #FFD9A3;
+    padding: 1px 6px; border-radius: 6px; font-size: .9em;
+  }
+  .foot { text-align: center; color: #C9A27A; font-size: .85em; margin-top: 22px; padding: 0 24px; }
+</style>
 </head>
 <body>
-<h1>Privacy Policy — Vaidik Sandhya</h1>
-<p class="muted">App: Vaidik Sandhya (<code>amuzicg.vaidiksandhya</code>) &bull; Effective: 24 September 2026 &bull; Contact: <a href="mailto:amuzicg@gmail.com">amuzicg@gmail.com</a></p>
 
+<div class="hero">
+  <div class="om">ॐ</div>
+  <h1>Privacy Policy — Vaidik Sandhya</h1>
+  <p class="muted">App: Vaidik Sandhya (<code>amuzicg.vaidiksandhya</code>) &bull; Effective: 24 September 2026 &bull; Contact: <a href="mailto:amuzicg@gmail.com">amuzicg@gmail.com</a></p>
+</div>
+
+<div class="card">
 <p>Vaidik Sandhya is an offline-first devotional app that plays Vedic Sandhya mantras. Every mantra and the ambient diya video is bundled inside the app and plays locally — no account is required, no third-party ads are shown, and we do not sell or share your data.</p>
+</div>
 
+<div class="card">
 <h2>1. Data we collect</h2>
 <p><strong>We collect no personal data and we operate no servers.</strong> Everything the app stores stays on your device:</p>
 <ul>
 <li><strong>On-device only:</strong> your selected language (Hindi/English) and whether the ambient diya video is shown, saved with DataStore/SharedPreferences. This never leaves your device.</li>
 <li><strong>No usage tracking, analytics, crash-reporting or advertising SDKs</strong> of any kind are included.</li>
 </ul>
+</div>
 
+<div class="card">
 <h2>2. Audio &amp; video playback</h2>
-<p>All mantras and the diya video are packaged in the app (<code>res/raw</code>) and played locally by ExoPlayer and <code>VideoView</code>. No audio, playback data or listening history is ever transmitted over the network.</p>
+<p>All mantras and the diya video are packaged in the app (<code>res/raw</code>) and played locally by ExoPlayer. No audio, playback data or listening history is ever transmitted over the network.</p>
+</div>
 
+<div class="card">
 <h2>3. Permissions we request and why</h2>
 <ul>
 <li><strong>Foreground service / media playback</strong> (<code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>): to keep mantras playing while the app is in the background and to show a media notification with playback controls.</li>
 <li><strong>Notifications</strong> (<code>POST_NOTIFICATIONS</code>): to show the playback notification (play/pause/previous/next).</li>
 </ul>
 <p>The app requests <strong>no network permissions</strong>. The “Privacy Policy” screen inside the app loads this same text from a file bundled with the app — it makes no network call. This public web page exists only because the Play Store listing requires a URL.</p>
+</div>
 
+<div class="card">
 <h2>4. Third-party services</h2>
 <p><strong>The app integrates no third-party SDKs, trackers or services and makes no network calls of any kind.</strong></p>
 <p><strong>Rate / Review:</strong> tapping “Rate and Review” opens the Google Play Store in an external app. The app itself sends no information beyond the standard Play Store attribution that Android handles.</p>
+</div>
 
+<div class="card">
 <h2>5. Data retention &amp; deletion</h2>
 <p>Because we run no servers and collect nothing, there is nothing to delete server-side. Uninstalling the app removes your on-device preferences and caches. The app sets <code>allowBackup=true</code>, so if you have Android system backup enabled your preferences may be included in that backup; clearing the app’s storage (Settings &gt; Apps &gt; Vaidik Sandhya &gt; Storage) removes them immediately.</p>
+</div>
 
+<div class="card">
 <h2>6. Children</h2>
 <p>The app is suitable for general audiences and does not knowingly collect any personal data from children, because it collects no personal data at all.</p>
+</div>
 
+<div class="card">
 <h2>7. Changes to this policy</h2>
 <p>Any changes will be posted on this page and the effective date updated.</p>
+</div>
 
+<div class="card">
 <h2>8. Contact</h2>
 <p>Questions or deletion requests: <a href="mailto:amuzicg@gmail.com">amuzicg@gmail.com</a>.</p>
+</div>
+
+<p class="foot">Vaidik Sandhya app • offline-first, privacy-respecting</p>
+
 </body>
 </html>
