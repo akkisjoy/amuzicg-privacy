@@ -1,25 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="theme-music">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — Amuzicg Player</title>
-<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:800px;margin:0 auto;padding:24px;line-height:1.6;color:#222}h1{font-size:1.8em}h2{margin-top:1.6em;font-size:1.2em}.muted{color:#666;font-size:.9em}ul{padding-left:1.2em}</style>
+<style>
+*{box-sizing:border-box}
+.theme-music{--bg0:#1B0A24;--bg1:#062A3A;--glow1:rgba(233,30,99,.35);--glow2:rgba(7,110,148,.35);--card:rgba(255,255,255,.045);--card-border:rgba(255,255,255,.1);--text:#F3EEF5;--muted:#BCAFC8;--accent:#F4538A;--accent-deep:#E91E63;--link:#F9A8D4;--code:#C3E88D;--btn-text:#2A0716}
+.theme-world{--bg0:#03211B;--bg1:#01302A;--glow1:rgba(0,209,161,.3);--glow2:rgba(0,87,71,.5);--card:rgba(255,255,255,.045);--card-border:rgba(255,255,255,.1);--text:#EDF5F2;--muted:#9DB8B0;--accent:#2BD9A7;--accent-deep:#005747;--link:#5EEAD4;--code:#C3E88D;--btn-text:#02211B}
+.theme-india{--bg0:#0A1440;--bg1:#2A1204;--glow1:rgba(70,126,243,.35);--glow2:rgba(255,153,51,.22);--card:rgba(255,255,255,.045);--card-border:rgba(255,255,255,.1);--text:#EEF1FB;--muted:#A9B4D4;--accent:#FF9933;--accent-deep:#467EF3;--link:#9DBCFF;--code:#C3E88D;--btn-text:#2A1503}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.65;color:var(--text);background:linear-gradient(180deg,var(--bg0),var(--bg1) 70%);min-height:100vh}
+.hero{position:relative;overflow:hidden;padding:56px 24px 40px;text-align:center;background:radial-gradient(60% 90% at 50% 0%,var(--glow1),transparent 70%),radial-gradient(50% 60% at 85% 100%,var(--glow2),transparent 70%)}
+.kicker{margin:0 0 12px;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
+.hero h1{margin:0;font-size:clamp(30px,6vw,44px);line-height:1.15;letter-spacing:-.01em}
+.hero h1 .amp{background:linear-gradient(90deg,var(--accent),var(--link));-webkit-background-clip:text;background-clip:text;color:transparent}
+.tagline{max-width:620px;margin:14px auto 0;font-size:16px;color:var(--muted)}
+.badges{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:20px}
+.badges span{font-size:12.5px;font-weight:600;padding:6px 14px;border-radius:999px;border:1px solid var(--card-border);background:rgba(0,0,0,.25);color:var(--text)}
+.wrap{max-width:800px;margin:0 auto;padding:8px 20px 40px}
+.toc{margin:0 0 8px;padding:18px 22px;border-radius:18px;background:var(--card);border:1px solid var(--card-border);font-size:14px}
+.toc b{display:block;margin-bottom:8px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.toc a{display:inline-block;margin:3px 12px 3px 0;color:var(--link);text-decoration:none}
+.toc a:hover{text-decoration:underline}
+.card{margin:16px 0;padding:22px 24px;border-radius:18px;background:var(--card);border:1px solid var(--card-border)}
+.card h2{margin:0 0 10px;font-size:19px;display:flex;align-items:center;gap:12px}
+.num{flex:0 0 auto;width:32px;height:32px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent-deep))}
+.card p{margin:10px 0}
+.card ul{margin:10px 0;padding-left:20px}
+.card li{margin:7px 0}
+a{color:var(--link)}
+code{font-size:.88em;padding:2px 7px;border-radius:7px;background:rgba(0,0,0,.35);color:var(--code);word-break:break-word}
+.contact{display:block;text-align:center;margin:26px 0 8px;padding:16px 20px;border-radius:16px;font-weight:700;font-size:16px;color:var(--btn-text);text-decoration:none;background:linear-gradient(90deg,var(--accent),var(--link))}
+.footer{margin:18px 0 30px;text-align:center;color:var(--muted);font-size:13px}
+.footer a{color:var(--muted)}
+</style>
 </head>
 <body>
-<h1>Privacy Policy — Amuzicg Player</h1>
-<p class="muted">App: Amuzicg Player (<code>amuzicg.musicplayer</code>) &bull; Effective: 24 September 2026 &bull; Contact: <a href="mailto:amuzicg@gmail.com">amuzicg@gmail.com</a></p>
-
-<p>Amuzicg Player is an offline-first music player with optional internet radio. We do not require an account, we show no third-party ads, and we do not sell your data.</p>
-
-<h2>1. Data we collect</h2>
+<header class="hero">
+<p class="kicker">Amuzicg &bull; Privacy Policy</p>
+<h1>Amuzicg <span class="amp">Player</span></h1>
+<p class="tagline">An offline-first music player with optional internet radio. No account, no third-party ads, and your data is never sold.</p>
+<div class="badges"><span>Effective 24 Sep 2026</span><span>No account needed</span><span>No ads</span><span>No analytics</span></div>
+</header>
+<main class="wrap">
+<nav class="toc"><b>On this page</b><a href="#c1">Data we collect</a><a href="#c2">Permissions</a><a href="#c3">Network services</a><a href="#c4">Social audio check</a><a href="#c5">Retention &amp; deletion</a><a href="#c6">Children</a><a href="#c7">Changes</a><a href="#c8">Contact</a></nav>
+<section class="card" id="c1"><h2><span class="num">1</span>Data we collect</h2>
 <p><strong>We collect no personal data on our own servers — we operate none.</strong> Everything below stays on your device unless you explicitly use a network feature:</p>
 <ul>
 <li><strong>On-device only:</strong> your music library metadata (read from MediaStore), app preferences, equalizer/sleep-timer settings, favorites and playlists (DataStore/SharedPreferences). This never leaves your device.</li>
 <li><strong>Feedback emails (optional):</strong> if you tap Feedback, your email app sends a message to <code>amuzicg@gmail.com</code>. Only what you write is sent.</li>
-</ul>
-
-<h2>2. Permissions we request and why</h2>
+</ul></section>
+<section class="card" id="c2"><h2><span class="num">2</span>Permissions we request and why</h2>
 <ul>
 <li><strong>Audio/media access</strong> (<code>READ_MEDIA_AUDIO</code> / <code>READ_EXTERNAL_STORAGE</code> on older Android): to list and play audio files stored on your device.</li>
 <li><strong>Notifications</strong> (<code>POST_NOTIFICATIONS</code>): to show playback controls while music/radio plays.</li>
@@ -27,30 +58,28 @@
 <li><strong>Internet / network state</strong> (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>): for radio streaming, station lists and album art (see §3).</li>
 <li><strong>Coarse location (declared):</strong> we do <em>not</em> collect GPS/location. Country/language for radio tabs is derived on-device from SIM country code and device locale.</li>
 <li><strong>Ringtone settings</strong> (<code>WRITE_SETTINGS</code>): only if you choose “Set as ringtone”.</li>
-</ul>
-
-<h2>3. Third-party network services (only when you use those features)</h2>
+</ul></section>
+<section class="card" id="c3"><h2><span class="num">3</span>Third-party network services</h2>
+<p>Used only when you use those features:</p>
 <ul>
 <li><strong>Internet radio directory (radio-browser.info):</strong> when browsing/searching radio, the app sends the search text / country / language / tag you entered to <code>de1.api.radio-browser.info</code> to fetch public station lists. No account or device ID is sent by us.</li>
 <li><strong>Radio streams:</strong> when you press play on a station, your device connects directly to that broadcaster’s streaming server to receive audio. That server may see your IP address (as with any internet streaming).</li>
 <li><strong>Album art (Last.fm):</strong> when showing artwork, the app may send artist/album/title text to <code>ws.audioscrobbler.com</code> to look up cover art.</li>
 <li><strong>Images (Coil):</strong> station/album artwork is downloaded and cached on-device.</li>
 </ul>
-<p>We use no analytics SDK, no crash-reporting SDK, and no ad SDK in this app.</p>
-
-<h2>4. Installed-app check (social audio, optional)</h2>
-<p>If you enable “Include social app audio”, the app checks on-device which of a small hard-coded list of messaging/social apps (e.g. WhatsApp, Telegram, Discord, Signal) is installed, only to label their downloaded audio. This list never leaves your device.</p>
-
-<h2>5. Data retention &amp; deletion</h2>
-<p>Since we run no servers or accounts, there is nothing to delete server-side. Uninstalling the app deletes on-device preferences and caches (Android may keep a backup only if you enabled system backup — the app sets <code>allowBackup=false</code>). Emails you sent us are deleted on request.</p>
-
-<h2>6. Children</h2>
-<p>The app is suitable for general audiences and does not knowingly collect children’s data, since it collects none.</p>
-
-<h2>7. Changes</h2>
-<p>We will post any changes on this page and update the effective date.</p>
-
-<h2>8. Contact</h2>
-<p>Questions or deletion requests: <a href="mailto:amuzicg@gmail.com">amuzicg@gmail.com</a>.</p>
+<p>We use no analytics SDK, no crash-reporting SDK, and no ad SDK in this app.</p></section>
+<section class="card" id="c4"><h2><span class="num">4</span>Installed-app check (social audio, optional)</h2>
+<p>If you enable “Include social app audio”, the app checks on-device which of a small hard-coded list of messaging/social apps (e.g. WhatsApp, Telegram, Discord, Signal) is installed, only to label their downloaded audio. This list never leaves your device.</p></section>
+<section class="card" id="c5"><h2><span class="num">5</span>Data retention &amp; deletion</h2>
+<p>Since we run no servers or accounts, there is nothing to delete server-side. Uninstalling the app deletes on-device preferences and caches (Android may keep a backup only if you enabled system backup — the app sets <code>allowBackup=false</code>). Emails you sent us are deleted on request.</p></section>
+<section class="card" id="c6"><h2><span class="num">6</span>Children</h2>
+<p>The app is suitable for general audiences and does not knowingly collect children’s data, since it collects none.</p></section>
+<section class="card" id="c7"><h2><span class="num">7</span>Changes</h2>
+<p>We will post any changes on this page and update the effective date.</p></section>
+<section class="card" id="c8"><h2><span class="num">8</span>Contact</h2>
+<p>Questions or deletion requests:</p></section>
+<a class="contact" href="mailto:amuzicg@gmail.com">amuzicg@gmail.com</a>
+<p class="footer">Amuzicg Player (<code>amuzicg.musicplayer</code>) &bull; Effective 24 September 2026 &bull; <a href="mailto:amuzicg@gmail.com">Contact</a></p>
+</main>
 </body>
 </html>

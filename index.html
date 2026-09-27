@@ -4,16 +4,38 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Amuzicg — Privacy Policies</title>
-<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:640px;margin:0 auto;padding:24px;line-height:1.6;color:#222}a{color:#0b57d0}</style>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:#F1EEF4;background:linear-gradient(180deg,#160826,#062A3A 80%);min-height:100vh}
+.hero{padding:64px 24px 32px;text-align:center;background:radial-gradient(60% 90% at 50% 0%,rgba(233,30,99,.3),transparent 70%),radial-gradient(50% 60% at 85% 100%,rgba(7,110,148,.35),transparent 70%)}
+.kicker{margin:0 0 12px;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:#BCAFC8}
+h1{margin:0;font-size:clamp(30px,6vw,44px)}
+h1 .amp{background:linear-gradient(90deg,#F4538A,#F9A8D4);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:#BCAFC8;max-width:560px;margin:14px auto 0}
+.grid{max-width:860px;margin:0 auto;padding:12px 20px 24px;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{display:block;padding:26px 24px;border-radius:20px;text-decoration:none;color:#fff;border:1px solid rgba(255,255,255,.12)}
+.card small{display:block;margin-top:10px;font-size:12.5px;opacity:.75;font-family:ui-monospace,monospace}
+.card h2{margin:0 0 6px;font-size:21px}
+.card p{margin:0;font-size:14px;opacity:.82}
+.card.music{background:linear-gradient(135deg,#3A0E35,#054766)}
+.card.world{background:linear-gradient(135deg,#01302A,#006f5a)}
+.card.india{background:linear-gradient(135deg,#0A1440,#7A3A00)}
+.card:hover{transform:translateY(-2px)}
+.footer{margin:8px 0 36px;text-align:center;color:#BCAFC8;font-size:13px}
+.footer a{color:#BCAFC8}
+</style>
 </head>
 <body>
-<h1>Amuzicg — Privacy Policies</h1>
-<ul>
-<li><a href="privacy-music.html">Amuzicg Player</a> (<code>amuzicg.musicplayer</code>)</li>
-<li><a href="privacy-world.html">Amuzicg World Radio</a> (<code>amuzicg.musicplayer.world</code>)</li>
-<li><a href="privacy-india.html">Amuzicg Indian Radio</a> (<code>amuzicg.musicplayer.india</code>)</li>
-<li><a href="privacy-vaidik-sandhya.html">Vaidik Sandhya</a> (<code>amuzicg.vaidiksandhya</code>)</li>
-</ul>
-<p>Contact: <a href="mailto:amuzicg@gmail.com">amuzicg@gmail.com</a></p>
+<header class="hero">
+<p class="kicker">Amuzicg</p>
+<h1>Privacy <span class="amp">Policies</span></h1>
+<p class="sub">One policy per app. No accounts, no ads, no analytics — on every Amuzicg app.</p>
+</header>
+<main class="grid">
+<a class="card music" href="privacy-music.html"><h2>Amuzicg Player</h2><p>Offline music + world radio in one app.</p><small>amuzicg.musicplayer</small></a>
+<a class="card world" href="privacy-world.html"><h2>Amuzicg World Radio</h2><p>Free live radio from around the globe.</p><small>amuzicg.musicplayer.world</small></a>
+<a class="card india" href="privacy-india.html"><h2>Amuzicg Indian Radio</h2><p>Indian radio, Akashvani &amp; state stations.</p><small>amuzicg.musicplayer.india</small></a>
+</main>
+<p class="footer">Questions? <a href="mailto:amuzicg@gmail.com">amuzicg@gmail.com</a></p>
 </body>
 </html>
