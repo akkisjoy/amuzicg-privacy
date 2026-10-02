@@ -40,7 +40,7 @@ code{font-size:.88em;padding:2px 7px;border-radius:7px;background:rgba(0,0,0,.35
 <p class="kicker">Amuzicg &bull; Privacy Policy</p>
 <h1>Amuzicg <span class="amp">Player</span></h1>
 <p class="tagline">An offline-first music player with optional internet radio. No account, no third-party ads, and your data is never sold.</p>
-<div class="badges"><span>Effective 24 Sep 2026</span><span>No account needed</span><span>No ads</span><span>No analytics</span></div>
+<div class="badges"><span>Effective 2 Oct 2026</span><span>No account needed</span><span>No ads</span><span>No analytics</span></div>
 </header>
 <main class="wrap">
 <nav class="toc"><b>On this page</b><a href="#c1">Data we collect</a><a href="#c2">Permissions</a><a href="#c3">Network services</a><a href="#c4">Social audio check</a><a href="#c5">Retention &amp; deletion</a><a href="#c6">Children</a><a href="#c7">Changes</a><a href="#c8">Contact</a></nav>
@@ -53,6 +53,7 @@ code{font-size:.88em;padding:2px 7px;border-radius:7px;background:rgba(0,0,0,.35
 <section class="card" id="c2"><h2><span class="num">2</span>Permissions we request and why</h2>
 <ul>
 <li><strong>Audio/media access</strong> (<code>READ_MEDIA_AUDIO</code> / <code>READ_EXTERNAL_STORAGE</code> on older Android): to list and play audio files stored on your device.</li>
+<li><strong>Microphone (optional, <code>RECORD_AUDIO</code>)</strong>: used only for the on-device live visualizer animation (spectrum / beat pulse on the CD and Immersive player screens). Android gates its audio-level API behind this permission. No audio is recorded, stored or transmitted — deny it and everything else still works. Requested at runtime only after an in-app explanation, and never asked again once you decide.</li>
 <li><strong>Notifications</strong> (<code>POST_NOTIFICATIONS</code>): to show playback controls while music/radio plays.</li>
 <li><strong>Foreground service / boot</strong> (<code>FOREGROUND_SERVICE*</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>WAKE_LOCK</code>): to keep playback running in the background.</li>
 <li><strong>Internet / network state</strong> (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>): for radio streaming, station lists and album art (see §3).</li>
@@ -65,6 +66,8 @@ code{font-size:.88em;padding:2px 7px;border-radius:7px;background:rgba(0,0,0,.35
 <li><strong>Internet radio directory (radio-browser.info):</strong> when browsing/searching radio, the app sends the search text / country / language / tag you entered to <code>de1.api.radio-browser.info</code> to fetch public station lists. No account or device ID is sent by us.</li>
 <li><strong>Radio streams:</strong> when you press play on a station, your device connects directly to that broadcaster’s streaming server to receive audio. That server may see your IP address (as with any internet streaming).</li>
 <li><strong>Album art (Last.fm):</strong> when showing artwork, the app may send artist/album/title text to <code>ws.audioscrobbler.com</code> to look up cover art.</li>
+<li><strong>Chromecast (Google Cast, phone only):</strong> if you tap the Cast button, Google Play services discovers Cast devices on your local network and streams the selected radio station to the device you choose. Governed by Google’s own privacy policy; we receive no data from it.</li>
+<li><strong>In-app updates (Google Play):</strong> the app asks the Play Store whether a newer version exists so it can offer an in-app update. Only the app’s own package/version info is exchanged with Google Play.</li>
 <li><strong>Images (Coil):</strong> station/album artwork is downloaded and cached on-device.</li>
 </ul>
 <p>We use no analytics SDK, no crash-reporting SDK, and no ad SDK in this app.</p></section>
@@ -79,7 +82,7 @@ code{font-size:.88em;padding:2px 7px;border-radius:7px;background:rgba(0,0,0,.35
 <section class="card" id="c8"><h2><span class="num">8</span>Contact</h2>
 <p>Questions or deletion requests:</p></section>
 <a class="contact" href="mailto:amuzicg@gmail.com">amuzicg@gmail.com</a>
-<p class="footer">Amuzicg Player (<code>amuzicg.musicplayer</code>) &bull; Effective 24 September 2026 &bull; <a href="mailto:amuzicg@gmail.com">Contact</a></p>
+<p class="footer">Amuzicg Player (<code>amuzicg.musicplayer</code>) &bull; Effective 2 October 2026 &bull; <a href="mailto:amuzicg@gmail.com">Contact</a></p>
 </main>
 </body>
 </html>
