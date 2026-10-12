@@ -60,8 +60,9 @@ code{font-size:.88em;padding:2px 7px;border-radius:7px;background:rgba(0,0,0,.35
 <li><strong>Ringtone settings</strong> (<code>WRITE_SETTINGS</code>): only if you choose “Set as ringtone”.</li>
 </ul></section>
 <section class="card" id="c3"><h2><span class="num">3</span>Third-party network services</h2>
-<p>Used only when you use those features:</p>
+<p>Used only when you use those features or when an unexpected application crash occurs:</p>
 <ul>
+<li><strong>Crash reporting (Google Firebase Crashlytics):</strong> if the app experiences an unexpected crash, anonymous crash diagnostic logs (stack trace, device model, Android OS version, and Firebase Installation ID) are transmitted securely via HTTPS to Google Firebase Crashlytics. This data is used strictly for technical bug fixing and app stability monitoring and is automatically purged after 90 days. No personal information, audio files, or music metadata are sent.</li>
 <li><strong>Internet radio directory (radio-browser.info):</strong> when browsing/searching radio, the app sends the search text / country / language / tag you entered to <code>de1.api.radio-browser.info</code> to fetch public station lists. No account or device ID is sent by us.</li>
 <li><strong>Radio streams:</strong> when you press play on a station, your device connects directly to that broadcaster’s streaming server to receive audio. That server may see your IP address (as with any internet streaming).</li>
 <li><strong>Album art (Last.fm):</strong> when showing artwork, the app may send artist/album/title text to <code>ws.audioscrobbler.com</code> to look up cover art.</li>
@@ -69,7 +70,7 @@ code{font-size:.88em;padding:2px 7px;border-radius:7px;background:rgba(0,0,0,.35
 <li><strong>In-app updates (Google Play):</strong> the app asks the Play Store whether a newer version exists so it can offer an in-app update. Only the app’s own package/version info is exchanged with Google Play.</li>
 <li><strong>Images (Coil):</strong> station/album artwork is downloaded and cached on-device.</li>
 </ul>
-<p>We use no analytics SDK, no crash-reporting SDK, and no ad SDK in this app.</p></section>
+<p>We use no advertising SDKs or third-party marketing analytics tracking. Google Firebase Crashlytics is used strictly for technical crash diagnostic reporting as described above.</p></section>
 <section class="card" id="c4"><h2><span class="num">4</span>Installed-app check (social audio, optional)</h2>
 <p>If you enable “Include social app audio”, the app checks on-device which of a small hard-coded list of messaging/social apps (e.g. WhatsApp, Telegram, Discord, Signal) is installed, only to label their downloaded audio. This list never leaves your device.</p></section>
 <section class="card" id="c5"><h2><span class="num">5</span>Data retention &amp; deletion</h2>
