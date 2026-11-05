@@ -40,20 +40,23 @@ code{font-size:.88em;padding:2px 7px;border-radius:7px;background:rgba(0,0,0,.35
 <div class="badges"><span>No Account Required</span><span>Zero Tracking</span><span>No Ads</span></div>
 </header>
 <main class="wrap">
-<nav class="toc"><b>Contents</b><a href="#c1">1. Summary</a><a href="#c2">2. Data collected</a><a href="#c3">3. Third parties</a><a href="#c4">4. Retention</a><a href="#c5">5. Children</a><a href="#c6">6. Contact</a></nav>
+<nav class="toc"><b>Contents</b><a href="#c1">1. Summary</a><a href="#c2">2. Data collected</a><a href="#c3">3. Third parties</a><a href="#c4">4. Retention &amp; deletion</a><a href="#c5">5. Children</a><a href="#c6">6. Contact</a></nav>
 <section class="card" id="c1"><h2><span class="num">1</span>Summary</h2>
 <p>World Artist Radio (<code>amuzicg.musicplayer.artist</code>) is designed with privacy as a fundamental principle. You do not need to create an account, log in, or provide personal details to use the app.</p></section>
 <section class="card" id="c2"><h2><span class="num">2</span>Data collected</h2>
 <p>We do not collect personal identifying information (PII). App preferences (such as selected radio theme or volume settings) are stored locally on your device.</p></section>
 <section class="card" id="c3"><h2><span class="num">3</span>Third-party services</h2>
 <ul>
+<li><strong>Google Firebase (Crashlytics, FCM &amp; Realtime Database):</strong> Used for technical crash diagnostic reporting (stack traces, device model, Android OS version, and Firebase Installation ID), FCM push notification delivery for live artist radio alerts, and storing optional user feedback submissions.</li>
+<li><strong>Deep Links & App Links:</strong> the app processes custom links (<code>amuzicg://radio/</code>) and web app links (<code>https://amuzicg-studio.web.app/radio/</code>) to open artist radio player pages directly when clicked.</li>
 <li><strong>Station directory (radio-browser.info):</strong> browsing/searching sends only your query (artist, language, search text) to <code>de1.api.radio-browser.info</code> to return public station lists.</li>
 <li><strong>Radio streams:</strong> pressing play connects your device directly to that broadcaster’s server, which may see your IP address.</li>
 <li><strong>Station images (Coil):</strong> artwork is downloaded and cached on-device.</li>
 </ul>
-<p>We use no advertising SDKs or third-party marketing analytics tracking. Google Firebase Crashlytics is used strictly for technical crash diagnostic reporting as described above.</p></section>
-<section class="card" id="c4"><h2><span class="num">4</span>Retention &amp; deletion</h2>
-<p>No server-side data exists to delete. Uninstalling removes on-device settings (app sets <code>allowBackup=false</code>). Emails you sent are deleted on request.</p></section>
+<p>We use no advertising SDKs or third-party marketing analytics tracking.</p></section>
+<section class="card" id="c4"><h2><span class="num">4</span>Data retention &amp; deletion requests</h2>
+<p>Since the app stores preferences locally, uninstalling removes all local settings (app sets <code>allowBackup=false</code>).</p>
+<p><strong>How to request data deletion:</strong> If you have submitted feedback or contact emails, you can request their deletion at any time. Simply email us at <a href="mailto:amuzicg@gmail.com">amuzicg@gmail.com</a> with your request, and any associated database records or correspondence will be permanently deleted within 7 business days.</p></section>
 <section class="card" id="c5"><h2><span class="num">5</span>Children</h2>
 <p>General-audience app; no personal data is knowingly collected from children because none is collected at all.</p></section>
 <section class="card" id="c6"><h2><span class="num">6</span>Changes &amp; contact</h2>
