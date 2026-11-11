@@ -39,8 +39,8 @@ code{font-size:.88em;padding:2px 7px;border-radius:7px;background:rgba(0,0,0,.35
 <header class="hero">
 <p class="kicker">Amuzick &bull; Privacy Policy</p>
 <h1>Amuzick <span class="amp">Player</span></h1>
-<p class="tagline">An offline-first music player with optional internet radio, AI karaoke, and external media playback. Unified experience for Mobile and Android TV. No account needed, no third-party ads, and your data is never sold.</p>
-<div class="badges"><span>Effective 10 Oct 2026</span><span>Mobile &amp; Android TV</span><span>No account needed</span><span>No ads</span><span>On-device processing</span></div>
+<p class="tagline">An offline-first music player with optional internet radio, AI karaoke, and external media playback for Android mobile devices. No account needed, no third-party ads, and your data is never sold.</p>
+<div class="badges"><span>Effective 10 Oct 2026</span><span>Mobile Only</span><span>No account needed</span><span>No ads</span><span>On-device processing</span></div>
 </header>
 <main class="wrap">
 <nav class="toc"><b>On this page</b><a href="#c1">Data we collect</a><a href="#c2">Permissions</a><a href="#c3">Network services</a><a href="#c4">Social audio check</a><a href="#c5">Retention &amp; deletion</a><a href="#c6">Children</a><a href="#c7">Changes</a><a href="#c8">Contact</a></nav>
@@ -48,13 +48,13 @@ code{font-size:.88em;padding:2px 7px;border-radius:7px;background:rgba(0,0,0,.35
 <p><strong>We collect no personal data on our own servers — we operate none.</strong> Everything below stays strictly on your device unless you explicitly interact with a network feature:</p>
 <ul>
 <li><strong>On-device music library:</strong> metadata read from Android MediaStore and external audio files opened via intents or file pickers. Your local music library files, tags, and album art remain on your device and are never uploaded.</li>
-<li><strong>App preferences &amp; saved content:</strong> equalizer settings, playback preferences, sleep timer, favorites, custom playlists, and saved karaoke recordings ("My Singing"). All saved locally via DataStore/SharedPreferences. Same privacy protections apply whether running on Mobile or Android TV.</li>
+<li><strong>App preferences &amp; saved content:</strong> equalizer settings, playback preferences, sleep timer, favorites, custom playlists, and saved karaoke recordings ("My Singing"). All saved locally via DataStore/SharedPreferences. Same privacy protections apply across all supported mobile devices.</li>
 <li><strong>Feedback &amp; support emails (optional):</strong> if you tap Feedback, your email app sends a message to <code>amuzicg@gmail.com</code>. Only what you explicitly type and send is received.</li>
 </ul></section>
 <section class="card" id="c2"><h2><span class="num">2</span>Permissions we request and why</h2>
 <ul>
 <li><strong>Audio and media storage access</strong> (<code>READ_MEDIA_AUDIO</code> / <code>READ_EXTERNAL_STORAGE</code> on older Android): to list, play, and organize local audio files stored on your device and external storage.</li>
-<li><strong>Microphone (optional, <code>RECORD_AUDIO</code>)</strong>: used for the on-device live audio visualizer, Android TV voice search, and optional Karaoke singing mode. In Karaoke mode, your voice is temporarily recorded locally on-device for live pitch visualizer and vocal preview. If you tap Save, your mixed track is stored locally under "My Singing". If you tap Discard or Retry, temporary recordings are permanently removed. Microphone audio is never transmitted off your device or uploaded to any server.</li>
+<li><strong>Microphone (optional, <code>RECORD_AUDIO</code>)</strong>: used for the on-device live audio visualizer and optional Karaoke singing mode. In Karaoke mode, your voice is temporarily recorded locally on-device for live pitch visualizer and vocal preview. If you tap Save, your mixed track is stored locally under "My Singing". If you tap Discard or Retry, temporary recordings are permanently removed. Microphone audio is never transmitted off your device or uploaded to any server.</li>
 <li><strong>Notifications</strong> (<code>POST_NOTIFICATIONS</code>): to display playback controls in the notification bar and deliver optional push notifications for live radio broadcasts, station alerts, and feature updates.</li>
 <li><strong>Foreground service &amp; system wake lock</strong> (<code>FOREGROUND_SERVICE*</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>WAKE_LOCK</code>): to keep media playback running uninterrupted in the background.</li>
 <li><strong>Internet &amp; network state</strong> (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>): for streaming internet radio, fetching public station directories, downloading cover art, downloading on-demand AI karaoke vocal models, and delivering push notifications (see §3).</li>
