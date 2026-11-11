@@ -6,7 +6,9 @@
 <title>Privacy Policy — Amuzick World Radio</title>
 <style>
 *{box-sizing:border-box}
+.theme-music{--bg0:#1B0A24;--bg1:#062A3A;--glow1:rgba(233,30,99,.35);--glow2:rgba(7,110,148,.35);--card:rgba(255,255,255,.045);--card-border:rgba(255,255,255,.1);--text:#F3EEF5;--muted:#BCAFC8;--accent:#F4538A;--accent-deep:#E91E63;--link:#F9A8D4;--code:#C3E88D;--btn-text:#2A0716}
 .theme-world{--bg0:#03211B;--bg1:#01302A;--glow1:rgba(0,209,161,.3);--glow2:rgba(0,87,71,.5);--card:rgba(255,255,255,.045);--card-border:rgba(255,255,255,.1);--text:#EDF5F2;--muted:#9DB8B0;--accent:#2BD9A7;--accent-deep:#005747;--link:#5EEAD4;--code:#C3E88D;--btn-text:#02211B}
+.theme-india{--bg0:#0A1440;--bg1:#2A1204;--glow1:rgba(70,126,243,.35);--glow2:rgba(255,153,51,.22);--card:rgba(255,255,255,.045);--card-border:rgba(255,255,255,.1);--text:#EEF1FB;--muted:#A9B4D4;--accent:#FF9933;--accent-deep:#467EF3;--link:#9DBCFF;--code:#C3E88D;--btn-text:#2A1503}
 body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.65;color:var(--text);background:linear-gradient(180deg,var(--bg0),var(--bg1) 70%);min-height:100vh}
 .hero{position:relative;overflow:hidden;padding:56px 24px 40px;text-align:center;background:radial-gradient(60% 90% at 50% 0%,var(--glow1),transparent 70%),radial-gradient(50% 60% at 85% 100%,var(--glow2),transparent 70%)}
 .kicker{margin:0 0 12px;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
@@ -36,41 +38,41 @@ code{font-size:.88em;padding:2px 7px;border-radius:7px;background:rgba(0,0,0,.35
 <body>
 <header class="hero">
 <p class="kicker">Amuzicg &bull; Privacy Policy</p>
-<h1>Amuzicg <span class="amp">World Radio</span></h1>
-<p class="tagline">Free live radio from around the globe. Unified experience for Mobile and Android TV. No account, no third-party ads, and your data is never sold.</p>
+<h1>Amuzick <span class="amp">World Radio</span></h1>
+<p class="tagline">Free live radio streaming from around the globe. Unified experience for Mobile and Android TV. No account needed, no third-party ads, and your data is never sold.</p>
 <div class="badges"><span>Effective 10 Oct 2026</span><span>Mobile &amp; Android TV</span><span>No account needed</span><span>No ads</span><span>No analytics</span></div>
 </header>
 <main class="wrap">
-<nav class="toc"><strong>On this page</strong><a href="#c1">Data we collect</a><a href="#c2">Permissions</a><a href="#c3">Network services</a><a href="#c4">Retention &amp; deletion</a><a href="#c5">Children</a><a href="#c6">Contact</a></nav>
+<nav class="toc"><b>On this page</b><a href="#c1">Data we collect</a><a href="#c2">Permissions</a><a href="#c3">Network services</a><a href="#c4">Retention &amp; deletion</a><a href="#c5">Children</a><a href="#c6">Contact</a></nav>
 <section class="card" id="c1"><h2><span class="num">1</span>Data we collect</h2>
-<p><strong>We collect no personal data on our own servers — we operate none.</strong></p>
+<p><strong>We collect no personal identifying data on our own servers — we operate none.</strong></p>
 <ul>
-<li><strong>On-device only:</strong> favorites, quality filter, sleep timer and display preferences (DataStore). Never transmitted. Same privacy protections apply whether running on Mobile or Android TV.</li>
-<li><strong>Feedback emails (optional):</strong> if you tap Feedback, your email app sends a message to <code>amuzicg@gmail.com</code>.</li>
+<li><strong>On-device preferences:</strong> radio favorites, quality filter, sleep timer, and display preferences are stored locally via Android DataStore. Never transmitted. Same privacy protections apply on Mobile and Android TV.</li>
+<li><strong>Feedback &amp; support emails (optional):</strong> if you tap Feedback, your email app sends a message to <code>amuzicg@gmail.com</code>. Only what you explicitly type and send is received.</li>
 </ul></section>
-<section class="card" id="c2"><h2><span class="num">2</span>Permissions and why</h2>
+<section class="card" id="c2"><h2><span class="num">2</span>Permissions we request and why</h2>
 <ul>
-<li><strong>Internet / network state</strong> (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>): required to fetch station lists and stream audio.</li>
-<li><strong>Notifications / foreground service</strong> (<code>POST_NOTIFICATIONS</code>, <code>FOREGROUND_SERVICE*</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>WAKE_LOCK</code>): background playback controls and optional push notifications for live station alerts and announcements.</li>
-<li><strong>Microphone (optional, <code>RECORD_AUDIO</code>)</strong>: used on Android TV for voice search or on-device visualizer. No audio is stored or transmitted.</li>
+<li><strong>Internet &amp; network state</strong> (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>): required to fetch station lists and stream live audio.</li>
+<li><strong>Notifications &amp; background playback</strong> (<code>POST_NOTIFICATIONS</code>, <code>FOREGROUND_SERVICE*</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>WAKE_LOCK</code>): playback controls, background playback, and optional push notifications for live broadcast alerts.</li>
+<li><strong>Microphone (optional, <code>RECORD_AUDIO</code>)</strong>: used on Android TV for voice search or live audio visualizer. Audio input is processed locally in real-time and is never recorded or uploaded.</li>
 </ul></section>
 <section class="card" id="c3"><h2><span class="num">3</span>Third-party network services</h2>
 <ul>
-<li><strong>Push Notifications (Google Firebase Cloud Messaging - FCM):</strong> used to deliver push notifications for live radio station alerts and announcements. Firebase Cloud Messaging processes ephemeral Device Registration Tokens solely for notification delivery. No personal data or listening history is sold or shared.</li>
-<li><strong>Deep Links & App Links:</strong> the app processes custom links (<code>amuzicg://radio/</code>) and web app links (<code>https://amuzicg-studio.web.app/radio/</code>) to open radio station player pages directly when clicked.</li>
-<li><strong>Crash reporting (Google Firebase Crashlytics):</strong> if the app experiences an unexpected crash, anonymous crash diagnostic logs (stack trace, device model, Android OS version, and Firebase Installation ID) are transmitted securely via HTTPS to Google Firebase Crashlytics. This data is used strictly for technical bug fixing and app stability monitoring and is automatically purged after 90 days. No personal information or radio preferences are sent.</li>
-<li><strong>Station directory (radio-browser.info):</strong> browsing/searching sends only your query (search text, country, language, tag) to <code>de1.api.radio-browser.info</code> to return public station lists.</li>
-<li><strong>Radio streams:</strong> pressing play connects your device directly to that broadcaster’s server, which may see your IP address (normal for streaming).</li>
-<li><strong>Station images (Coil):</strong> artwork is downloaded and cached on-device.</li>
+<li><strong>Push Notifications (Google Firebase Cloud Messaging - FCM):</strong> used to send push notifications for featured radio station alerts and announcements.</li>
+<li><strong>Deep Links &amp; App Links:</strong> processes custom links (<code>amuzicg://radio/</code>) and web links (<code>https://amuzicg-studio.web.app/radio/</code>) to open station player screens directly.</li>
+<li><strong>Crash Diagnostic Reporting (Google Firebase Crashlytics):</strong> anonymous technical crash diagnostic logs (stack trace, device model, Android OS version, and Firebase Installation ID) transmitted securely via HTTPS. Automatically purged after 90 days.</li>
+<li><strong>Station Directory (radio-browser.info):</strong> browsing or searching sends queries to <code>de1.api.radio-browser.info</code> to fetch public station lists.</li>
+<li><strong>Radio Audio Streams:</strong> pressing play connects your device directly to the broadcaster’s streaming server, which receives your IP address.</li>
+<li><strong>Station Images (Coil):</strong> artwork is downloaded and cached on-device.</li>
 </ul>
-<p>We use no advertising SDKs or third-party marketing analytics tracking. Google Firebase Crashlytics is used strictly for technical crash diagnostic reporting as described above.</p></section>
+<p>We do not use advertising SDKs or commercial marketing analytics tracking.</p></section>
 <section class="card" id="c4"><h2><span class="num">4</span>Data retention &amp; deletion requests</h2>
-<p>Since the app stores preferences locally, uninstalling removes all local settings (app sets <code>allowBackup=false</code>).</p>
-<p><strong>How to request data deletion:</strong> If you have submitted feedback or contact emails, you can request their deletion at any time. Simply email us at <a href="mailto:amuzicg@gmail.com">amuzicg@gmail.com</a> with your request, and any associated database records or correspondence will be permanently deleted within 7 business days.</p></section>
+<p>All app settings stay stored locally on your device. Uninstalling the app removes all local data (the app sets <code>allowBackup=false</code>).</p>
+<p><strong>Data Deletion Requests:</strong> Because we do not mandate user accounts or store user profiles remotely, there is no remote account data to erase. If you have sent us support or feedback emails, you can request the permanent deletion of your email correspondence at any time by emailing <a href="mailto:amuzicg@gmail.com">amuzicg@gmail.com</a>. Requests are processed within 7 business days.</p></section>
 <section class="card" id="c5"><h2><span class="num">5</span>Children</h2>
-<p>General-audience app; no personal data is knowingly collected from children because none is collected at all.</p></section>
+<p>Amuzick World Radio is suitable for general audiences and does not knowingly collect personal data from children.</p></section>
 <section class="card" id="c6"><h2><span class="num">6</span>Changes &amp; contact</h2>
-<p>Changes will be posted here. Questions or deletion requests:</p></section>
+<p>We will post any policy updates on this page with a revised effective date. Questions or deletion requests:</p></section>
 <a class="contact" href="mailto:amuzicg@gmail.com">amuzicg@gmail.com</a>
 <p class="footer">Amuzick World Radio (<code>amuzicg.musicplayer.world</code>) &bull; Effective 10 October 2026 &bull; <a href="mailto:amuzicg@gmail.com">Contact</a></p>
 </main>

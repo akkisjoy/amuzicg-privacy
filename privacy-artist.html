@@ -28,39 +28,50 @@ body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-s
 .card li{margin:7px 0}
 a{color:var(--link)}
 code{font-size:.88em;padding:2px 7px;border-radius:7px;background:rgba(0,0,0,.35);color:var(--code);word-break:break-word}
-.contact{display:block;width:fit-content;margin:28px auto 8px;padding:14px 28px;border-radius:999px;background:linear-gradient(135deg,var(--accent),var(--accent-deep));color:var(--btn-text);font-weight:700;text-decoration:none}
-.footer{text-align:center;font-size:13px;color:var(--muted);margin-top:24px}
+.contact{display:block;text-align:center;margin:26px 0 8px;padding:16px 20px;border-radius:16px;font-weight:700;font-size:16px;color:var(--btn-text);text-decoration:none;background:linear-gradient(90deg,var(--accent),var(--link))}
+.footer{margin:18px 0 30px;text-align:center;color:var(--muted);font-size:13px}
+.footer a{color:var(--muted)}
 </style>
 </head>
 <body>
 <header class="hero">
-<p class="kicker">Amuzicg Studio</p>
+<p class="kicker">Amuzicg Studio &bull; Privacy Policy</p>
 <h1>World Artist <span class="amp">Radio</span></h1>
-<p class="tagline">Privacy Policy for World Artist Radio — Top Global Singers, Musicians & Artists.</p>
-<div class="badges"><span>No Account Required</span><span>Zero Tracking</span><span>No Ads</span></div>
+<p class="tagline">Stream radio stations for top global singers, musicians, and artists. Unified experience for Mobile and Android TV. No account needed, zero ad tracking, and your data is never sold.</p>
+<div class="badges"><span>Effective 10 Oct 2026</span><span>Mobile &amp; Android TV</span><span>No account needed</span><span>No ads</span><span>No tracking</span></div>
 </header>
 <main class="wrap">
-<nav class="toc"><b>Contents</b><a href="#c1">1. Summary</a><a href="#c2">2. Data collected</a><a href="#c3">3. Third parties</a><a href="#c4">4. Retention &amp; deletion</a><a href="#c5">5. Children</a><a href="#c6">6. Contact</a></nav>
-<section class="card" id="c1"><h2><span class="num">1</span>Summary</h2>
-<p>World Artist Radio (<code>amuzicg.musicplayer.artist</code>) is designed with privacy as a fundamental principle. You do not need to create an account, log in, or provide personal details to use the app.</p></section>
-<section class="card" id="c2"><h2><span class="num">2</span>Data collected</h2>
-<p>We do not collect personal identifying information (PII). App preferences (such as selected radio theme or volume settings) are stored locally on your device.</p></section>
-<section class="card" id="c3"><h2><span class="num">3</span>Third-party services</h2>
+<nav class="toc"><b>On this page</b><a href="#c1">Data we collect</a><a href="#c2">Permissions</a><a href="#c3">Network services</a><a href="#c4">Retention &amp; deletion</a><a href="#c5">Children</a><a href="#c6">Contact</a></nav>
+<section class="card" id="c1"><h2><span class="num">1</span>Data we collect</h2>
+<p><strong>World Artist Radio (<code>amuzicg.musicplayer.artist</code>) is built around privacy. You do not need an account or login to use the app.</strong></p>
 <ul>
-<li><strong>Google Firebase (Crashlytics, FCM &amp; Realtime Database):</strong> Used for technical crash diagnostic reporting (stack traces, device model, Android OS version, and Firebase Installation ID), FCM push notification delivery for live artist radio alerts, and storing optional user feedback submissions.</li>
-<li><strong>Deep Links & App Links:</strong> the app processes custom links (<code>amuzicg://radio/</code>) and web app links (<code>https://amuzicg-studio.web.app/radio/</code>) to open artist radio player pages directly when clicked.</li>
-<li><strong>Station directory (radio-browser.info):</strong> browsing/searching sends only your query (artist, language, search text) to <code>de1.api.radio-browser.info</code> to return public station lists.</li>
-<li><strong>Radio streams:</strong> pressing play connects your device directly to that broadcaster’s server, which may see your IP address.</li>
-<li><strong>Station images (Coil):</strong> artwork is downloaded and cached on-device.</li>
+<li><strong>On-device preferences:</strong> radio artist favorites, playback settings, sleep timer, and theme choices are stored locally via Android DataStore. Never uploaded to remote servers. Same privacy protections apply on Mobile and Android TV.</li>
+<li><strong>Feedback &amp; support submissions (optional):</strong> if you send feedback in-app, your feedback message is transmitted securely to Firebase Realtime Database or sent via email to <code>amuzicg@gmail.com</code> solely to resolve issues.</li>
+</ul></section>
+<section class="card" id="c2"><h2><span class="num">2</span>Permissions we request and why</h2>
+<ul>
+<li><strong>Internet &amp; network state</strong> (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>): required to fetch global artist radio catalogs and stream live audio.</li>
+<li><strong>Notifications &amp; background playback</strong> (<code>POST_NOTIFICATIONS</code>, <code>FOREGROUND_SERVICE*</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>WAKE_LOCK</code>): playback controls, background audio playback, and optional push notifications for featured artist alerts and station updates.</li>
+<li><strong>Microphone (optional, <code>RECORD_AUDIO</code>)</strong>: used on Android TV for voice search or live audio visualizer. Audio input is processed locally in real-time and is never recorded or uploaded.</li>
+</ul></section>
+<section class="card" id="c3"><h2><span class="num">3</span>Third-party network services</h2>
+<ul>
+<li><strong>Push Notifications (Google Firebase Cloud Messaging - FCM):</strong> used to deliver push notifications for featured artist radio stations and announcements. Ephemeral FCM registration tokens are processed solely for notification routing.</li>
+<li><strong>Artist Catalog Sync &amp; Feedback (Google Firebase):</strong> Firebase Remote Config and Realtime Database are used to keep the global artist radio catalog synchronized and cache artist metadata locally. Optional feedback submissions are stored securely.</li>
+<li><strong>Deep Links &amp; App Links:</strong> the app processes custom links (<code>amuzicg://radio/</code>) and verified web links (<code>https://amuzicg-studio.web.app/radio/</code>) to open artist radio player screens directly.</li>
+<li><strong>Crash Diagnostic Reporting (Google Firebase Crashlytics):</strong> if an unexpected app crash occurs, anonymous technical diagnostic logs (stack trace, device model, Android OS version, and Firebase Installation ID) are transmitted securely via HTTPS. Used strictly for technical stability monitoring and automatically purged after 90 days.</li>
+<li><strong>Station Directory (radio-browser.info &amp; Firebase Catalog):</strong> searching or browsing queries <code>de1.api.radio-browser.info</code> or the Firebase artist catalog. No personal user identifiers are sent.</li>
+<li><strong>Radio Streams:</strong> pressing play connects your device directly to the broadcaster’s streaming server, which receives your IP address (standard for internet audio streaming).</li>
+<li><strong>Artist Images (Coil):</strong> artist avatars and station images are downloaded and cached on-device.</li>
 </ul>
-<p>We use no advertising SDKs or third-party marketing analytics tracking.</p></section>
+<p>We do not use advertising SDKs or commercial marketing analytics tracking.</p></section>
 <section class="card" id="c4"><h2><span class="num">4</span>Data retention &amp; deletion requests</h2>
-<p>Since the app stores preferences locally, uninstalling removes all local settings (app sets <code>allowBackup=false</code>).</p>
-<p><strong>How to request data deletion:</strong> If you have submitted feedback or contact emails, you can request their deletion at any time. Simply email us at <a href="mailto:amuzicg@gmail.com">amuzicg@gmail.com</a> with your request, and any associated database records or correspondence will be permanently deleted within 7 business days.</p></section>
+<p>All app settings stay stored locally on your device. Uninstalling the app removes all local settings (the app sets <code>allowBackup=false</code>).</p>
+<p><strong>Data Deletion Requests:</strong> Because we do not collect personal profiles or mandate accounts, there is no remote account data to delete. If you have submitted feedback or contact emails, you can request the permanent deletion of your data at any time by emailing <a href="mailto:amuzicg@gmail.com">amuzicg@gmail.com</a>. Requests are processed within 7 business days.</p></section>
 <section class="card" id="c5"><h2><span class="num">5</span>Children</h2>
-<p>General-audience app; no personal data is knowingly collected from children because none is collected at all.</p></section>
+<p>World Artist Radio is suitable for general audiences and does not knowingly collect personal data from children.</p></section>
 <section class="card" id="c6"><h2><span class="num">6</span>Changes &amp; contact</h2>
-<p>Changes will be posted here. Questions or deletion requests:</p></section>
+<p>Policy changes will be published here with an updated effective date. Questions or deletion requests:</p></section>
 <a class="contact" href="mailto:amuzicg@gmail.com">amuzicg@gmail.com</a>
 <p class="footer">World Artist Radio (<code>amuzicg.musicplayer.artist</code>) &bull; Effective 10 October 2026 &bull; <a href="mailto:amuzicg@gmail.com">Contact</a></p>
 </main>

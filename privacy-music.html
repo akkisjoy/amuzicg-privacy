@@ -7,6 +7,8 @@
 <style>
 *{box-sizing:border-box}
 .theme-music{--bg0:#1B0A24;--bg1:#062A3A;--glow1:rgba(233,30,99,.35);--glow2:rgba(7,110,148,.35);--card:rgba(255,255,255,.045);--card-border:rgba(255,255,255,.1);--text:#F3EEF5;--muted:#BCAFC8;--accent:#F4538A;--accent-deep:#E91E63;--link:#F9A8D4;--code:#C3E88D;--btn-text:#2A0716}
+.theme-world{--bg0:#03211B;--bg1:#01302A;--glow1:rgba(0,209,161,.3);--glow2:rgba(0,87,71,.5);--card:rgba(255,255,255,.045);--card-border:rgba(255,255,255,.1);--text:#EDF5F2;--muted:#9DB8B0;--accent:#2BD9A7;--accent-deep:#005747;--link:#5EEAD4;--code:#C3E88D;--btn-text:#02211B}
+.theme-india{--bg0:#0A1440;--bg1:#2A1204;--glow1:rgba(70,126,243,.35);--glow2:rgba(255,153,51,.22);--card:rgba(255,255,255,.045);--card-border:rgba(255,255,255,.1);--text:#EEF1FB;--muted:#A9B4D4;--accent:#FF9933;--accent-deep:#467EF3;--link:#9DBCFF;--code:#C3E88D;--btn-text:#2A1503}
 body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.65;color:var(--text);background:linear-gradient(180deg,var(--bg0),var(--bg1) 70%);min-height:100vh}
 .hero{position:relative;overflow:hidden;padding:56px 24px 40px;text-align:center;background:radial-gradient(60% 90% at 50% 0%,var(--glow1),transparent 70%),radial-gradient(50% 60% at 85% 100%,var(--glow2),transparent 70%)}
 .kicker{margin:0 0 12px;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
@@ -37,50 +39,51 @@ code{font-size:.88em;padding:2px 7px;border-radius:7px;background:rgba(0,0,0,.35
 <header class="hero">
 <p class="kicker">Amuzick &bull; Privacy Policy</p>
 <h1>Amuzick <span class="amp">Player</span></h1>
-<p class="tagline">An offline-first music player with optional internet radio. Unified experience for Mobile and Android TV. No account, no third-party ads, and your data is never sold.</p>
-<div class="badges"><span>Effective 10 Oct 2026</span><span>Mobile &amp; Android TV</span><span>No account needed</span><span>No ads</span><span>No analytics</span></div>
+<p class="tagline">An offline-first music player with optional internet radio, AI karaoke, and external media playback. Unified experience for Mobile and Android TV. No account needed, no third-party ads, and your data is never sold.</p>
+<div class="badges"><span>Effective 10 Oct 2026</span><span>Mobile &amp; Android TV</span><span>No account needed</span><span>No ads</span><span>On-device processing</span></div>
 </header>
 <main class="wrap">
 <nav class="toc"><b>On this page</b><a href="#c1">Data we collect</a><a href="#c2">Permissions</a><a href="#c3">Network services</a><a href="#c4">Social audio check</a><a href="#c5">Retention &amp; deletion</a><a href="#c6">Children</a><a href="#c7">Changes</a><a href="#c8">Contact</a></nav>
 <section class="card" id="c1"><h2><span class="num">1</span>Data we collect</h2>
-<p><strong>We collect no personal data on our own servers — we operate none.</strong> Everything below stays on your device unless you explicitly use a network feature:</p>
+<p><strong>We collect no personal data on our own servers — we operate none.</strong> Everything below stays strictly on your device unless you explicitly interact with a network feature:</p>
 <ul>
-<li><strong>On-device only:</strong> your music library metadata (read from MediaStore), app preferences, equalizer/sleep-timer settings, favorites and playlists (DataStore/SharedPreferences). This never leaves your device. Same privacy protections apply whether running on Mobile or Android TV.</li>
-<li><strong>Feedback emails (optional):</strong> if you tap Feedback, your email app sends a message to <code>amuzicg@gmail.com</code>. Only what you write is sent.</li>
+<li><strong>On-device music library:</strong> metadata read from Android MediaStore and external audio files opened via intents or file pickers. Your local music library files, tags, and album art remain on your device and are never uploaded.</li>
+<li><strong>App preferences &amp; saved content:</strong> equalizer settings, playback preferences, sleep timer, favorites, custom playlists, and saved karaoke recordings ("My Singing"). All saved locally via DataStore/SharedPreferences. Same privacy protections apply whether running on Mobile or Android TV.</li>
+<li><strong>Feedback &amp; support emails (optional):</strong> if you tap Feedback, your email app sends a message to <code>amuzicg@gmail.com</code>. Only what you explicitly type and send is received.</li>
 </ul></section>
 <section class="card" id="c2"><h2><span class="num">2</span>Permissions we request and why</h2>
 <ul>
-<li><strong>Audio/media access</strong> (<code>READ_MEDIA_AUDIO</code> / <code>READ_EXTERNAL_STORAGE</code> on older Android): to list and play audio files stored on your device.</li>
-<li><strong>Microphone (optional, <code>RECORD_AUDIO</code>)</strong>: used for the on-device live visualizer, Android TV voice search and optional karaoke singing. Karaoke temporarily records your voice on this device for preview; Save keeps your mixed take in My Singing, and Discard or Retry removes the temporary take. Microphone audio is not uploaded. Other playback features work without microphone access.</li>
-<li><strong>Notifications</strong> (<code>POST_NOTIFICATIONS</code>): to show background media playback controls and to deliver optional push notifications for live radio broadcasts, station alerts, and feature updates.</li>
-<li><strong>Foreground service / boot</strong> (<code>FOREGROUND_SERVICE*</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>WAKE_LOCK</code>): to keep playback running in the background.</li>
-<li><strong>Internet / network state</strong> (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>): for radio streaming, station lists and album art (see §3).</li>
-<li><strong>Ringtone settings</strong> (<code>WRITE_SETTINGS</code>): only if you choose “Set as ringtone”.</li>
+<li><strong>Audio and media storage access</strong> (<code>READ_MEDIA_AUDIO</code> / <code>READ_EXTERNAL_STORAGE</code> on older Android): to list, play, and organize local audio files stored on your device and external storage.</li>
+<li><strong>Microphone (optional, <code>RECORD_AUDIO</code>)</strong>: used for the on-device live audio visualizer, Android TV voice search, and optional Karaoke singing mode. In Karaoke mode, your voice is temporarily recorded locally on-device for live pitch visualizer and vocal preview. If you tap Save, your mixed track is stored locally under "My Singing". If you tap Discard or Retry, temporary recordings are permanently removed. Microphone audio is never transmitted off your device or uploaded to any server.</li>
+<li><strong>Notifications</strong> (<code>POST_NOTIFICATIONS</code>): to display playback controls in the notification bar and deliver optional push notifications for live radio broadcasts, station alerts, and feature updates.</li>
+<li><strong>Foreground service &amp; system wake lock</strong> (<code>FOREGROUND_SERVICE*</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>WAKE_LOCK</code>): to keep media playback running uninterrupted in the background.</li>
+<li><strong>Internet &amp; network state</strong> (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>): for streaming internet radio, fetching public station directories, downloading cover art, downloading on-demand AI karaoke vocal models, and delivering push notifications (see §3).</li>
+<li><strong>System settings &amp; vibration</strong> (<code>WRITE_SETTINGS</code>, <code>VIBRATE</code>): <code>WRITE_SETTINGS</code> is used only if you choose "Set as ringtone"; gentle vibration is used for optional haptic feedback.</li>
 </ul></section>
 <section class="card" id="c3"><h2><span class="num">3</span>Third-party network services</h2>
-<p>Used only when you use those features or when an unexpected application crash occurs:</p>
+<p>Network connections occur only when you use online features or when an unexpected crash occurs:</p>
 <ul>
-<li><strong>Push Notifications (Google Firebase Cloud Messaging - FCM):</strong> used to deliver push notifications for live radio station alerts and announcements. Firebase Cloud Messaging processes ephemeral Device Registration Tokens solely for notification delivery. No personal data or listening history is sold or shared.</li>
-<li><strong>Deep Links & App Links:</strong> the app processes custom links (<code>amuzicg://radio/</code>) and web app links (<code>https://amuzicg-studio.web.app/radio/</code>) to open radio station player pages directly when clicked.</li>
-<li><strong>Crash reporting (Google Firebase Crashlytics):</strong> if the app experiences an unexpected crash, anonymous crash diagnostic logs (stack trace, device model, Android OS version, and Firebase Installation ID) are transmitted securely via HTTPS to Google Firebase Crashlytics. This data is used strictly for technical bug fixing and app stability monitoring and is automatically purged after 90 days. No personal information, audio files, or music metadata are sent.</li>
-<li><strong>Internet radio directory (radio-browser.info):</strong> when browsing/searching radio, the app sends the search text / country / language / tag you entered to <code>de1.api.radio-browser.info</code> to fetch public station lists. No account or device ID is sent by us.</li>
-<li><strong>Radio streams:</strong> when you press play on a station, your device connects directly to that broadcaster’s streaming server to receive audio. That server may see your IP address (as with any internet streaming).</li>
-<li><strong>Album art (Last.fm):</strong> when showing artwork, the app may send artist/album/title text to <code>ws.audioscrobbler.com</code> to look up cover art.</li>
-<li><strong>In-app updates (Google Play):</strong> the app asks the Play Store whether a newer version exists so it can offer an in-app update. Only the app’s own package/version info is exchanged with Google Play.</li>
-<li><strong>Images (Coil):</strong> station/album artwork is downloaded and cached on-device.</li>
+<li><strong>Push Notifications (Google Firebase Cloud Messaging - FCM):</strong> used to deliver push notifications for live radio station alerts and announcements. FCM processes ephemeral Device Registration Tokens solely for routing notifications. No personal data or listening history is sold or shared.</li>
+<li><strong>Deep Links &amp; App Links:</strong> the app processes custom links (<code>amuzicg://radio/</code>) and verified web links (<code>https://amuzicg-studio.web.app/radio/</code>) to launch radio station player screens directly when clicked.</li>
+<li><strong>Crash Diagnostic Reporting (Google Firebase Crashlytics):</strong> if an unexpected app crash occurs, anonymous technical diagnostic logs (stack trace, device model, Android OS version, and Firebase Installation ID) are transmitted securely via HTTPS. This data is used exclusively for fixing bugs and monitoring app stability, and is automatically deleted after 90 days. No audio files, music metadata, or personal information are included.</li>
+<li><strong>Internet Radio Directory (radio-browser.info):</strong> searching or browsing radio stations sends your search term, country, language, or genre tag to <code>de1.api.radio-browser.info</code> to retrieve public station lists. No account or device ID is sent.</li>
+<li><strong>Radio Audio Streams:</strong> playing a station connects your device directly to that broadcaster’s streaming server, which receives your IP address (standard for internet audio streaming).</li>
+<li><strong>Album Art Lookup (Last.fm &amp; Coil):</strong> artwork lookup queries artist and title text via <code>ws.audioscrobbler.com</code>. Downloaded images are cached locally on-device using Coil. On-device face detection (Google Play Services ML Kit) is used locally to center album cover crops.</li>
+<li><strong>On-Demand AI Karaoke Models:</strong> AI vocal separation models for Karaoke mode are downloaded on-demand from secure endpoints (<code>https://akkisjoy.github.io/amuzicg-privacy/</code>) and processed entirely on-device using ONNX Runtime.</li>
+<li><strong>In-App Updates (Google Play):</strong> queries the Google Play Store to check if a newer app version is available.</li>
 </ul>
-<p>We use no advertising SDKs or third-party marketing analytics tracking. Google Firebase Crashlytics is used strictly for technical crash diagnostic reporting as described above.</p></section>
+<p>We do not include third-party advertising SDKs or commercial marketing analytics trackers. Diagnostic logging via Google Firebase Crashlytics is strictly limited to technical stability monitoring.</p></section>
 <section class="card" id="c4"><h2><span class="num">4</span>Installed-app check (social audio, optional)</h2>
-<p>If you enable “Include social app audio”, the app checks on-device which of a small hard-coded list of messaging/social apps (e.g. WhatsApp, Telegram, Discord, Signal) is installed, only to label their downloaded audio. This list never leaves your device.</p></section>
+<p>If you enable "Include social app audio", the app checks on-device whether a small, hard-coded list of messaging apps (such as WhatsApp, Telegram, Discord, and Signal) is installed. This is done solely to categorize and label audio files downloaded from those apps. This detection is performed entirely on-device and is never transmitted externally.</p></section>
 <section class="card" id="c5"><h2><span class="num">5</span>Data retention &amp; deletion requests</h2>
-<p>Since the app stores preferences locally, uninstalling removes all local settings (app sets <code>allowBackup=false</code>).</p>
-<p><strong>How to request data deletion:</strong> If you have submitted feedback or contact emails, you can request their deletion at any time. Simply email us at <a href="mailto:amuzicg@gmail.com">amuzicg@gmail.com</a> with your request, and any associated database records or correspondence will be permanently deleted within 7 business days.</p></section>
+<p>All app settings, playlists, and recordings are stored locally on your device. Uninstalling the app removes all local data (the app sets <code>allowBackup=false</code>).</p>
+<p><strong>Data Deletion Requests:</strong> Because we do not require user accounts or store user data on remote servers, there is no remote account data to delete. If you have sent us support or feedback emails, you can request the permanent deletion of your email correspondence at any time by contacting us at <a href="mailto:amuzicg@gmail.com">amuzicg@gmail.com</a>. Deletion requests are processed within 7 business days.</p></section>
 <section class="card" id="c6"><h2><span class="num">6</span>Children</h2>
-<p>The app is suitable for general audiences and does not knowingly collect children’s data, since it collects none.</p></section>
+<p>Amuzick Player is designed for general audiences and does not knowingly collect or solicit personal information from children under the age of 13 (or applicable legal age).</p></section>
 <section class="card" id="c7"><h2><span class="num">7</span>Changes</h2>
-<p>We will post any changes on this page and update the effective date.</p></section>
+<p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date.</p></section>
 <section class="card" id="c8"><h2><span class="num">8</span>Contact</h2>
-<p>Questions or deletion requests:</p></section>
+<p>For any questions or privacy inquiries:</p></section>
 <a class="contact" href="mailto:amuzicg@gmail.com">amuzicg@gmail.com</a>
 <p class="footer">Amuzick Player (<code>amuzicg.musicplayer</code>) &bull; Effective 10 October 2026 &bull; <a href="mailto:amuzicg@gmail.com">Contact</a></p>
 </main>
