@@ -39,8 +39,8 @@ code{font-size:.88em;padding:2px 7px;border-radius:7px;background:rgba(0,0,0,.35
 <header class="hero">
 <p class="kicker">Amuzick &bull; Privacy Policy</p>
 <h1>Amuzick <span class="amp">Player</span></h1>
-<p class="tagline">An offline-first music player with optional internet radio, AI karaoke, and external media playback for Android mobile devices. No account needed, no third-party ads, and your data is never sold.</p>
-<div class="badges"><span>Effective 10 Oct 2026</span><span>Mobile Only</span><span>No account needed</span><span>No ads</span><span>On-device processing</span></div>
+<p class="tagline">An offline-first music player with optional internet radio, podcasts, AI karaoke, and external media playback for Android mobile devices. No account needed, no third-party ads, and your data is never sold.</p>
+<div class="badges"><span>Effective 15 Nov 2026</span><span>Mobile Only</span><span>No account needed</span><span>No ads</span><span>On-device processing</span></div>
 </header>
 <main class="wrap">
 <nav class="toc"><b>On this page</b><a href="#c1">Data we collect</a><a href="#c2">Permissions</a><a href="#c3">Network services</a><a href="#c4">Social audio check</a><a href="#c5">Retention &amp; deletion</a><a href="#c6">Children</a><a href="#c7">Changes</a><a href="#c8">Contact</a></nav>
@@ -48,7 +48,7 @@ code{font-size:.88em;padding:2px 7px;border-radius:7px;background:rgba(0,0,0,.35
 <p><strong>We collect no personal data on our own servers — we operate none.</strong> Everything below stays strictly on your device unless you explicitly interact with a network feature:</p>
 <ul>
 <li><strong>On-device music library:</strong> metadata read from Android MediaStore and external audio files opened via intents or file pickers. Your local music library files, tags, and album art remain on your device and are never uploaded.</li>
-<li><strong>App preferences &amp; saved content:</strong> equalizer settings, playback preferences, sleep timer, favorites, custom playlists, and saved karaoke recordings ("My Singing"). All saved locally via DataStore/SharedPreferences. Same privacy protections apply across all supported mobile devices.</li>
+<li><strong>App preferences &amp; saved content:</strong> equalizer settings, playback preferences, sleep timer, favorites, custom playlists, followed podcasts, podcast playback position &amp; listening progress, and saved karaoke recordings ("My Singing"). All saved locally via DataStore/SharedPreferences. Same privacy protections apply across all supported mobile devices.</li>
 <li><strong>Feedback &amp; support emails (optional):</strong> if you tap Feedback, your email app sends a message to <code>amuzicg@gmail.com</code>. Only what you explicitly type and send is received.</li>
 </ul></section>
 <section class="card" id="c2"><h2><span class="num">2</span>Permissions we request and why</h2>
@@ -58,7 +58,7 @@ code{font-size:.88em;padding:2px 7px;border-radius:7px;background:rgba(0,0,0,.35
 <li><strong>Notifications</strong> (<code>POST_NOTIFICATIONS</code>): to display playback controls in the notification bar and deliver optional push notifications for live radio broadcasts, station alerts, and feature updates.</li>
 <li><strong>Notification Listener Service / Notification Access (optional)</strong>: used solely if you enable "External Apps" playback controls. This allows the app locally on your device to detect media session tokens and track controls from active music apps. No notification text, personal messages, or non-media notification data from other apps are ever read, logged, stored, or transmitted off your device.</li>
 <li><strong>Foreground service &amp; system wake lock</strong> (<code>FOREGROUND_SERVICE*</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>WAKE_LOCK</code>): to keep media playback running uninterrupted in the background.</li>
-<li><strong>Internet &amp; network state</strong> (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>): for streaming internet radio, fetching public station directories, downloading cover art, downloading on-demand AI karaoke vocal models, and delivering push notifications (see §3).</li>
+<li><strong>Internet &amp; network state</strong> (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>): for streaming internet radio, discovering &amp; searching podcasts, loading RSS feeds, downloading cover art, downloading on-demand AI karaoke vocal models, and delivering push notifications (see §3).</li>
 <li><strong>System settings &amp; vibration</strong> (<code>WRITE_SETTINGS</code>, <code>VIBRATE</code>): <code>WRITE_SETTINGS</code> is used only if you choose "Set as ringtone"; gentle vibration is used for optional haptic feedback.</li>
 </ul></section>
 <section class="card" id="c3"><h2><span class="num">3</span>Third-party network services</h2>
@@ -67,6 +67,8 @@ code{font-size:.88em;padding:2px 7px;border-radius:7px;background:rgba(0,0,0,.35
 <li><strong>Push Notifications (Google Firebase Cloud Messaging - FCM):</strong> used to deliver push notifications for live radio station alerts and announcements. FCM processes ephemeral Device Registration Tokens solely for routing notifications. No personal data or listening history is sold or shared.</li>
 <li><strong>Deep Links &amp; App Links:</strong> the app processes custom links (<code>amuzicg://radio/</code>) and verified web links (<code>https://amuzicg-studio.web.app/radio/</code>) to launch radio station player screens directly when clicked.</li>
 <li><strong>Crash Diagnostic Reporting (Google Firebase Crashlytics):</strong> if an unexpected app crash occurs, anonymous technical diagnostic logs (stack trace, device model, Android OS version, and Firebase Installation ID) are transmitted securely via HTTPS. This data is used exclusively for fixing bugs and monitoring app stability, and is automatically deleted after 90 days. No audio files, music metadata, or personal information are included.</li>
+<li><strong>Podcast Directory &amp; Search (iTunes Search API):</strong> searching or browsing podcast shows and top charts queries Apple’s public iTunes Search &amp; Lookup API (<code>itunes.apple.com</code>) to fetch podcast metadata, show art, genre categories, and episode lists. No user account, location, or personal device identifier is sent with these queries.</li>
+<li><strong>Podcast RSS Feeds &amp; Audio Streams:</strong> subscribing to or playing a podcast episode connects your device directly to the show creator's public RSS feed and audio hosting server. The hosting server receives standard web request metadata (such as your device's IP address) necessary to stream the audio file.</li>
 <li><strong>Internet Radio Directory (radio-browser.info):</strong> searching or browsing radio stations sends your search term, country, language, or genre tag to <code>de1.api.radio-browser.info</code> to retrieve public station lists. No account or device ID is sent.</li>
 <li><strong>Radio Audio Streams:</strong> playing a station connects your device directly to that broadcaster’s streaming server, which receives your IP address (standard for internet audio streaming).</li>
 <li><strong>Album Art Lookup (Last.fm &amp; Coil):</strong> artwork lookup queries artist and title text via <code>ws.audioscrobbler.com</code>. Downloaded images are cached locally on-device using Coil. On-device face detection (Google Play Services ML Kit) is used locally to center album cover crops.</li>
@@ -86,7 +88,7 @@ code{font-size:.88em;padding:2px 7px;border-radius:7px;background:rgba(0,0,0,.35
 <section class="card" id="c8"><h2><span class="num">8</span>Contact</h2>
 <p>For any questions or privacy inquiries:</p></section>
 <a class="contact" href="mailto:amuzicg@gmail.com">amuzicg@gmail.com</a>
-<p class="footer">Amuzick Player (<code>amuzicg.musicplayer</code>) &bull; Effective 10 October 2026 &bull; <a href="mailto:amuzicg@gmail.com">Contact</a></p>
+<p class="footer">Amuzick Player (<code>amuzicg.musicplayer</code>) &bull; Effective 15 November 2026 &bull; <a href="mailto:amuzicg@gmail.com">Contact</a></p>
 </main>
 </body>
 </html>
