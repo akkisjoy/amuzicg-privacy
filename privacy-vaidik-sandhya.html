@@ -58,21 +58,21 @@
 </div>
 
 <div class="card">
-<p>Arya Satsang Vidhi (Vaidik Sandhya) is an offline-first devotional app providing Vedic Sandhya mantras, Hawan audio, Swastivachan, Shantikaranam, Pravachan audio, Satyarth Prakash, and Bhajans. Everything is bundled inside the app for offline local playback — no user registration or account creation is required, no third-party ads are displayed, and we never sell or share your data.</p>
+<p>Arya Satsang Vidhi is a devotional app providing Vedic Sandhya mantras, Hawan audio, Swastivachan, Shantikaranam, Pravachan audio, Satyarth Prakash, Bhajans, and Live/Online Radio streaming. Everything is bundled inside the app for offline local playback or streamed on demand — no user registration or account creation is required, no third-party ads are displayed, and we never sell or share your data.</p>
 </div>
 
 <div class="card">
 <h2>1. Data We Collect</h2>
-<p><strong>We collect no personal data and operate no remote data collection servers.</strong> All app settings stay strictly on your device:</p>
+<p><strong>We collect no personal data and operate no remote user data collection servers.</strong> All app settings and progress stay strictly on your device:</p>
 <ul>
-<li><strong>On-device preferences:</strong> Your chosen app language (Hindi/English), text size preferences, and ambient video toggle are stored locally using DataStore/SharedPreferences. This data never leaves your device.</li>
+<li><strong>On-device preferences &amp; progress:</strong> Your chosen app language (Hindi/English), text size preferences, ambient video toggle, and playback progress (such as resume positions for Pravachans) are stored locally using DataStore/SharedPreferences. This data never leaves your device.</li>
 <li><strong>No tracking:</strong> No analytics SDKs, advertising IDs, user behavior tracking, or data-collection tools are embedded in this application.</li>
 </ul>
 </div>
 
 <div class="card">
-<h2>2. Audio &amp; Media Playback</h2>
-<p>All core audio mantras and ambient visuals are embedded within the application (<code>res/raw</code> and local assets) and rendered locally by ExoPlayer. Your listening history and playback state remain strictly local.</p>
+<h2>2. Audio, Media Playback &amp; Streaming</h2>
+<p>All core audio mantras and ambient visuals are embedded within the application (<code>res/raw</code> and local assets) and rendered locally by ExoPlayer. When using online radio streaming or casting features, audio is streamed securely over the internet or local network without tracking user identity or listening history.</p>
 </div>
 
 <div class="card">
@@ -80,8 +80,9 @@
 <ul>
 <li><strong>Foreground Service / Media Playback</strong> (<code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>): Enables continuous audio playback while the application is in the background and provides media controls in the system notification shade.</li>
 <li><strong>Notifications</strong> (<code>POST_NOTIFICATIONS</code>): Displays the active playback control notification (Play, Pause, Previous, Next).</li>
+<li><strong>Internet / Network Access</strong> (<code>INTERNET</code>): Required solely for streaming online radio stations on-demand or casting audio to compatible devices (such as Google Cast devices) on your network.</li>
 </ul>
-<p>The application requires no network permissions for standard offline operation. Article viewers load bundled HTML files locally without transmitting data over the internet.</p>
+<p>No personal telemetry or user tracking is performed during audio streaming or casting sessions.</p>
 </div>
 
 <div class="card">
@@ -92,7 +93,7 @@
 
 <div class="card">
 <h2>5. Data Storage &amp; Deletion</h2>
-<p>Because no user data is uploaded or stored on external servers, there is no server-side data to delete. Uninstalling the app or clearing application storage (Settings &gt; Apps &gt; Arya Satsang Vidhi &gt; Storage) completely resets all local settings.</p>
+<p>Because no user personal data is uploaded or stored on external servers, there is no server-side data to delete. Uninstalling the app or clearing application storage (Settings &gt; Apps &gt; Arya Satsang Vidhi &gt; Storage) completely resets all local settings and playback history.</p>
 </div>
 
 <div class="card">
